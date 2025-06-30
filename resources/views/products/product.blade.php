@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-  <div class="px-40 flex flex-1 justify-center py-5">
+    <div class="px-40 flex flex-1 justify-center py-5">
     <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
     <div class="flex flex-wrap justify-between gap-3 p-4">
       <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">Entdecken Sie unsere
@@ -33,46 +33,46 @@
       <div class="product-title">{{$item->name}}</div>
       <div class="product-rating">★★★★★ <span>(8)</span></div>
       <div class="product-specs">
-        <label>Prozessor:</label> <span>{{$item->description}}</span>
+      <label>Prozessor:</label> <span>{{$item->description}}</span>
       </div>
       </div>
       <div class="product-actions">
       <div>
-        <div class="product-pricing">
-        <span class="product-price">{{$item->price}}€</span>
-        </div>
-        <div class="product-note">inkl. MwSt. versandkostenfrei</div>
-        <br>
-        <form action="{{ route('cart.add', $item->id) }}" method="POST" class="inline-block">
-        @csrf
-        <button type="submit" class="cart-btn px-9 bg-black text-white rounded hover:bg-gray-800 transition">
-        In den Warenkorb
-        </button>
-        </form>
+      <div class="product-pricing">
+      <span class="product-price">{{$item->price}}€</span>
+      </div>
+      <div class="product-note">inkl. MwSt. versandkostenfrei</div>
 
-        <a href="{{ route('cart.show') }}">🛒 Zum Warenkorb</a>
+      <form action="{{ route('cart.add', $item->id) }}" method="POST" class="inline-block">
+      @csrf
+      <button type="submit" class="cart-btn px-9   bg-black text-white rounded hover:bg-gray-800 transition">
+      In den Warenkorb
+      </button>
+      </form>
+
+      {{-- <a href="{{ route('cart.show') }}">🛒 Zum Warenkorb</a> --}}
 
 
-        <!-- Button-Gruppe -->
-        <div class="flex gap-2 mt-2">
-        <a href="{{ route('products.show', $item->id) }}"
-        class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
-        Anzeigen
-        </a>
-        <a href="{{ route('products.edit', $item->id) }}"
-        class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 transition">
-        Bearbeiten
-        </a>
-        <form action="{{ route('products.destroy', $item->id) }}" method="POST"
-        onsubmit="return confirm('Wirklich löschen?');" class="inline-block">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">
-        Löschen
-        </button>
-        </form>
+      <!-- Button-Gruppe -->
+      <div class="flex gap-2 mt-2">
+      <a href="{{ route('products.show', $item->id) }}"
+      class="bg-blue-500 text-white px-3 py-2 h-11 rounded hover:bg-blue-600 transition"><i class="fas fa-eye text-xl px-2 "></i>
 
-        </div>
+      </a>
+      <a href="{{ route('products.edit', $item->id) }}"
+      class="bg-yellow-500 text-white px-3 py-2 h-11 rounded hover:bg-yellow-600 transition">
+      <i class="fas fa-edit text-xl px-2"></i>
+      </a>
+      <form action="{{ route('products.destroy', $item->id) }}" method="POST"
+      onsubmit="return confirm('Wirklich löschen?');" class="inline-block">
+      @csrf
+      @method('DELETE')
+      <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition text-lg">
+      <i class="fas fa-trash-alt text-xl px-2"></i>
+      </button>
+      </form>
+
+      </div>
       </div>
       </div>
       </div>
@@ -85,5 +85,5 @@
 
     </div>
     </div>
-  </div>
+    </div>
 @endsection

@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="{{asset('css/cart.css')}}">
     <title>Produkte</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 {{-- <link rel="stylesheet" href="{{ asset('css/product.css') }}"> --}}
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
