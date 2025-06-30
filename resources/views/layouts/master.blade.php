@@ -110,7 +110,7 @@
 
 
                     {{-- --------------------------------------------- --}}
-                    <button
+                    <a href="{{ route('cart.show') }}"
                         class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f2f2f2] text-[#141414] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
                         <div class="text-[#141414]" data-icon="ShoppingCart" data-size="20px" data-weight="regular">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -119,7 +119,7 @@
                                 </path>
                             </svg>
                         </div>
-                        </button>
+                        </a>
 
                  
                 </div>
